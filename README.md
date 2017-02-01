@@ -1,6 +1,8 @@
 # ezSketch
 **ezSketch.js** is an easy stroke tool for javascript plugin to draw in canvas.
 
+**Demo** : [https://rawgit.com/welson327/ezSketch/master/demo.html](https://rawgit.com/welson327/ezSketch/master/demo.html)
+
 ### Dependency: jQuery (>= 1.10)
 
 Code Sample:
