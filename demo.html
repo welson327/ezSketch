@@ -1,0 +1,116 @@
+
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>EzSketch Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+    #canvas {
+        border:1px solid #999;
+    }
+    .tools .brush:hover{
+        text-decoration:none;
+        border:2px solid #ffc000;
+    }
+    .tools .brushArea .actived{
+        border:2px solid #ffc000;
+    }
+    input[type='range']{
+        width:300px;
+        margin-right:4px;
+    }
+    .tools .userBrushSize{
+        width:83px;
+        text-align:center;
+        margin:1px;
+    }
+    input[type='text'].actived{
+        border:2px solid #ffc000;
+        margin:0;
+    }
+
+    .tools .colorArea{
+        width:410px;
+        overflow:auto;
+        margin-left: 8px;
+        margin-bottom:15px;
+    }
+    .tools .colorArea .actived{
+        border:2px solid #ffc000;
+        margin: 1px 0px 1px 2px;
+
+    }
+    .tools .color{
+        display:inline-block;
+        float:left;
+        width:35px;
+        height:35px;
+        border:1px solid #999;
+        margin: 2px 1px 2px 3px;
+    }
+    .tools .color:hover{
+        border:2px solid #ffc000;
+        margin: 1px 0px 1px 2px;
+    }
+    .tools .black{  background-color:#000;}
+    .tools .gray{   background-color:#7f7f7f;}
+    .tools .brown{  background-color:#880015;}
+    .tools .red{    background-color:#ed1c24;}
+    .tools .orange{ background-color:#ff7f27;}
+    .tools .yellow{ background-color:#fff200;}
+    .tools .green{  background-color:#22b14c;}
+    .tools .blue{   background-color:#00a2e8;}
+
+    </style>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            ezSketch.js Demo
+        </div>
+
+        <div class="panel-body">
+        	<canvas id="canvas" width="256" height="256" style="cursor:default;cursor:crosshair;"></canvas>
+            <div class="tools">
+                <p class="subject">Stroke Size</p>
+                <div class="userSetBrushArea">
+                    <input type="text" class="userBrushSize" value="10px" id="strokeWidthRangerValue"/>
+                    <input type="range" min="3" max="150" step="1" value="10" id="strokeWidthRanger"/>
+                </div>
+
+                <hr>
+
+                <p class="subject">Stroke Color</p>
+                <div class="colorArea" id="strokeColor">
+                    <a href="javascript:void(0)" class="color black actived"></a>
+                    <a href="javascript:void(0)" class="color red"></a>
+                    <a href="javascript:void(0)" class="color orange"></a>
+                    <a href="javascript:void(0)" class="color yellow"></a>
+                    <a href="javascript:void(0)" class="color green"></a>
+                    <a href="javascript:void(0)" class="color blue"></a>
+                </div>
+
+                <hr>
+
+                <a href="javascript:void(0)" class="btn btn-sm btn-primary stroke">Stroke</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-warning eraser">Eraser</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-default" id="redo">Redo</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-default" id="undo">Undo</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-info" id="clear">Clear</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-info" id="save">Save</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-1.10.2.min.js"
+  integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/jquery.log.js"></script>
+<script type="text/javascript" src="js/ezSketch.js"></script>
+<script type="text/javascript" src="js/demo.js"></script>  
+</body>
+</html>
