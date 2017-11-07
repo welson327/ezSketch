@@ -6,15 +6,15 @@
 ### Dependency: jQuery (>= 1.10)
 
 Code Sample:
->
-  $("#your_canvas").ezSketch({  
-  &nbsp;&nbsp;  strokeWidth: 10,  
-	&nbsp;&nbsp;  strokeColor: "black",  
-	&nbsp;&nbsp;  strokeCallback: function(evt) {  
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// do something  
-	&nbsp;&nbsp;&nbsp;&nbsp;}  
-	});  
-
+```js
+$("#your_canvas").ezSketch({  
+  strokeWidth: 10,  
+  strokeColor: "black",  
+  strokeCallback: function(evt) {  
+    // do something  
+  }  
+});  
+```
   
 Methods:
 
